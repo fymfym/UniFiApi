@@ -62,7 +62,7 @@ namespace KoenZomers.UniFi.Api
         /// </summary>
         /// <param name="baseUri">BaseUri of the UniFi Controller, i.e. https://192.168.0.1:8443</param>
         public Api(Uri baseUri) : this(baseUri, null)
-        {            
+        {
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace KoenZomers.UniFi.Api
         {
             HttpUtility.DisableSslValidation();
         }
-        
+
         /// <summary>
         /// Enables connecting to a remote server hosting UniFi using a TLS 1.1 or TLS 1.2 certificate
         /// </summary>
