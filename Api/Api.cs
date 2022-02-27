@@ -290,6 +290,18 @@ namespace KoenZomers.UniFi.Api
         }
 
         /// <summary>
+        /// Gets all sites registered with UniFi
+        /// </summary>
+        /// <returns>List with all sites</returns>
+        public async Task<List<Responses.SiteState>> GetSitesStatus()
+        {
+            var unifiUri = new Uri(BaseUri, $"/api/stat/sites");
+            var resultString = await EnsureAuthenticatedGetRequest(unifiUri);
+            var resultJson = JsonConvert.DeserializeObject<Responses.ResponseEnvelope<Responses.SiteState>>(resultString);
+            return resultJson.data;
+        }
+
+        /// <summary>
         /// Gets the connection history of the client with the provided MAC Address
         /// </summary>
         /// <param name="limit">Amount of historic items to retrieve. Most recent connection will be first. Default is last 5 connections to be returned.</param>
