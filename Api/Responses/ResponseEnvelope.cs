@@ -12,7 +12,7 @@ namespace KoenZomers.UniFi.Api.Responses
         /// List of type T with the data resulting from a request towards the UniFi Controller
         /// </summary>
         public List<T> data { get; set; }
-        
+
         /// <summary>
         /// Metadata regarding the request towards the UniFi Controller
         /// </summary>
