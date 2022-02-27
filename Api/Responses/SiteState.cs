@@ -9,7 +9,7 @@ namespace KoenZomers.UniFi.Api.Responses
     public class SiteState : BaseResponse
     {
         /// <summary>
-        /// Identifier 
+        /// Identifier
         /// </summary>
         [JsonProperty(PropertyName = "_id")]
         public string Identifier { get; set; }
